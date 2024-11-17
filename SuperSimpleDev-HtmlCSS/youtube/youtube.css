@@ -1,0 +1,62 @@
+      /* *{
+            margin: 10px;
+        } */
+      p {
+          margin-top: 0;
+          font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif, arial;
+      }
+
+      .video-title {
+          width: 100%;
+          font-weight: 500;
+          font-size: 14px;
+          line-height: 20px;
+          margin-bottom: 12px;
+      }
+
+      .author,.video-stats {
+          color: rgb(69, 68, 68);
+          font-size: 12px;
+      }
+
+      .author {
+          margin-bottom: 4px;
+      } 
+
+      .thumbnail {
+          /* width: 300px; */
+          /* display: block; */
+          width: 100%;
+          margin-bottom: 10px;
+      }
+
+      .search-bar {
+          display: block;
+      }
+
+      /* .video-preview {
+          /* width: 300px; */
+          /* display: inline-block; */
+          /* vertical-align: top; */
+          /* margin-right: 15px;
+    }
+       */
+      .video-info-grid{
+        display: grid;
+        grid-template-columns: 50px 1fr;
+      }
+      .profile-picture {
+          width: 40px;
+          border-radius: 50px;
+
+          /* height: 100px;
+            object-fit: contain;---this code written by me
+            object-position: top; */
+      }
+      .video-grid{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr ;
+        grid-row: 20px;
+        row-gap: 16px;
+        column-gap: 8px;
+      }
