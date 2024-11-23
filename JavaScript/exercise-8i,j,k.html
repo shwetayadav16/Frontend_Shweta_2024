@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise 8 i,j,k </title>
+</head>
+
+<body>
+    <p>Coin Game</p>
+    <button onclick="playGame('heads')">Heads</button>
+    <button onclick="playGame('tails')">Tails</button>
+    <button onclick="
+    score.wins=0;
+    score.losses=0; 
+    localStorage.removeItem('score');
+    console.log(`Wins: ${score.wins}, Losses: ${score.losses}.`);
+    alert(`Score is Reset.`)">Reset Button</button>
+    <script>
+        let score = JSON.parse(localStorage.getItem('score')) || {
+            wins: 0,
+            losses: 0
+        }
+        // const score={
+        //   wins:0,
+        //   losses:0
+        // }
+        function playGame(playerGuess) {
+            const computerMove = Math.random();
+            let result = '';
+            let guess = playerGuess;
+            if (computerMove < 0.5) {
+                result = 'heads'
+            }
+            else {
+                result = 'tails'
+            }
+            //console.log(result);
+            if (guess == result) {
+                score.wins += 1;
+            }
+            else{
+                score.losses += 1;
+            }
+            localStorage.setItem('score', JSON.stringify(score));
+            console.log(`You picked ${playerGuess}.Computer picked ${result}.\nWins: ${score.wins}, Losses: ${score.losses}.`);
+            alert(`You picked ${playerGuess}.Computer picked ${result}.\nWins: ${score.wins}, Losses: ${score.losses}.`);
+        }
+    </script>
+</body>
+
+</html>
