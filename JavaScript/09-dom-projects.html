@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Objects</title>
+</head>
+
+<body>
+    <p>YouTube Subscribe Button</p>
+    <button onclick="subscribe();" class="js-subscribe-button">Subscribe</button>
+
+    <p>Amazon Shipping Calculator</p>
+    <p>Orders under $40 = +$10 shipping.<br><br>Orders over $40 = FREE shipping.</p>
+    <input placeholder="Cost of order" onkeydown="handleCostKeydown(event);" class="js-cost-input">
+    <button onclick="calculateTotal();">Calculate</button>
+    <p class="js-result"></p>
+    <script>
+        //know about string
+        String(25)
+        console.log('25'-5);
+        console.log(Number('25')+5);
+        //know about window --window represent the browser we need not to write.
+        //Javascript will automatically add it
+        window.document
+        window.console.log('window');
+
+
+        function handleCostKeydown(event) {
+            if (event.key === 'Enter') {
+                calculateTotal();
+            }
+        }
+        function calculateTotal() {
+            const inputElement = document.querySelector('.js-cost-input');
+            let cost = Number(inputElement.value);
+            if (cost < 40) {
+                cost += 10;
+            }
+            document.querySelector('.js-result').innerHTML = `$${cost}`;
+        }
+
+        function subscribe() {
+            const buttonElement = document.querySelector('.js-subscribe-button');
+            if (buttonElement.innerText === 'Subscribe') {
+                buttonElement.innerHTML = 'Subscribed';
+            } else {
+                buttonElement.innerHTML = 'Subscribe';
+            }
+        }
+    </script>
+</body>
+
+</html>
+<!-- 1. if there is sapce in the button text we can't use innerHTML so we use innerText 
+ then we use "innerText"-->

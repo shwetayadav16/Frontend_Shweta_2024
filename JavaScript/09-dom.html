@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+</head>
+
+<body>
+    <button>First Button</button>
+    <button class="js-button">Second Button</button>
+    <script>
+        console.log(document.querySelector('button').innerHTML);
+        //console.log(document.querySelector('body'));
+        document.querySelector('button').innerHTML='Changed';
+        // DOM combines JS and HTML together.It gives JS full control of webpage
+        const buttonElement=document.querySelector('.js-button');
+        console.log(buttonElement);
+
+
+        /*
+        console.log(document.title);
+        document.title = 'Changed';
+        //html elements in javascript
+        console.log(document.body);
+        console.log(typeof document.body);
+        console.log(document.body.innerHTML);
+        // document.body.innerHTML = 'Changed'
+        document.body.innerHTML='<button>Good job!</button>';
+        */
+  
+
+        /*
+        document.body.innerHTML='Good Bye';
+        document.title='Good Job!';
+        */
+    </script>
+</body>
+
+</html>
