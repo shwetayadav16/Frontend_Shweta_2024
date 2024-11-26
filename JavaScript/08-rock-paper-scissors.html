@@ -26,10 +26,7 @@
     alert(`Score is Reset.`)">Reset Button</button>
     <script>
 
-        let score = JSON.parse(localStorage.getItem
-        ('score'))
-        ||
-        // this will when score is null
+        let score = JSON.parse(localStorage.getItem('score'))||
         {
             wins: 0,
             losses: 0,
