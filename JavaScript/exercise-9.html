@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise 9</title>
+</head>
+
+<body>
+    <button>9a</button>
+    <button class="second-button">9a done!</button>
+    <p>Coin Game</p>
+    <button onclick="playGame('heads')">Heads</button>
+    <button onclick="playGame('tails')">Tails</button>
+    <button onclick="
+    score.wins=0;
+    score.losses=0; 
+    localStorage.removeItem('score');
+    updateScore();
+    //console.log(`Wins: ${score.wins}, Losses: ${score.losses}.`);
+    //alert(`Score is Reset.`)">Reset Button</button>
+    <p class="result"></p>
+    <p class="score"></p>
+    <script>
+        console.log(document.querySelector('button'));
+        console.log(document.querySelector('.second-button'));
+        let score = JSON.parse(localStorage.getItem('score')) || {
+            wins: 0,
+            losses: 0
+        }
+        updateScore();
+        // const score={
+        //   wins:0,
+        //   losses:0
+        // }
+        function playGame(playerGuess) {
+            const computerMove = Math.random();
+            let result = '';
+            let guess = playerGuess;
+            if (computerMove < 0.5) {
+                result = 'heads'
+            }
+            else {
+                result = 'tails'
+            }
+            //console.log(result);
+            if (guess == result) {
+                score.wins += 1;
+            }
+            else {
+                score.losses += 1;
+            }
+            localStorage.setItem('score', JSON.stringify(score));
+            updateScore();
+            //console.log(`You picked ${playerGuess}.Computer picked ${result}.\nWins: ${score.wins}, Losses: ${score.losses}.`);
+            document.querySelector('.result').innerHTML =`You picked ${playerGuess}. Computer picked ${result}. Result: ${guess === result ? 'You Win!' : 'You Lose!'}`;
+            //alert(`You picked ${playerGuess}.Computer picked ${result}.\nWins: ${score.wins}, Losses: ${score.losses}.`);
+        }
+        function updateScore() {
+            document.querySelector('.score').innerHTML = `Wins: ${score.wins}, Losses: ${score.losses}`;
+        }
+    </script>
+</body>
+
+</html>

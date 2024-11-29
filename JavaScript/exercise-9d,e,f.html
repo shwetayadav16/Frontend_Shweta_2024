@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Excercise 9d</title>
+</head>
+
+<body>
+    <input type="text" onkeydown="giveResult();" placeholder="Enter Your Name">
+    <button onclick="getYourName();">Submit</button>
+    <p class="name"></p>
+    <script>
+        function giveResult() {
+            if (event.key === 'Enter') {
+                getYourName();
+            }
+        }
+        function getYourName() {
+            const name = document.querySelector('input').value;
+            document.querySelector('.name').innerHTML = `Your name is: ${name}`;
+        }
+    </script>
+</body>
+
+</html>

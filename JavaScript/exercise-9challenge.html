@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Type Something...</title>
+</head>
+<body>
+    <input placeholder="Type Something" class="js-input" onkeyup="typing();">
+    <p class="result"></p>
+    <script>
+        function typing(){
+            const getsome=document.querySelector('.js-input');
+            document.querySelector('.result').innerHTML=getsome.value;
+        }
+    </script>
+</body>
+</html>
