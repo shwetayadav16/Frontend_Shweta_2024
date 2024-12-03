@@ -1,0 +1,55 @@
+body{
+    font-family: arial;
+}
+ .cart-button{
+    background-color: rgb(255, 216, 20);
+    border: none;
+    padding: 8px 40px;
+    border-radius: 30px;
+    cursor: pointer;
+ }
+ .is-added{
+    background-color: white;
+    cursor: pointer;
+    border: 2px gray solid;
+ }
+ .request-uber-button{
+    background-color: black;
+    color: white;
+    border: none;
+    font-weight: bold;
+    padding: 10px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+ }
+ .schedule-uber-button{
+    background-color: rgb(230, 230, 230);
+    color: black;
+    border: none;
+    font-weight: bold;
+    padding: 10px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+ }
+ .gaming,.music,.tech{
+    background-color: black;
+    color: white;
+    border: none;
+    font-weight: bold;
+    padding: 10px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+ }
+ /* .gaming-on,.music-on,.tech-on{
+    background-color: rgb(230, 230, 230);
+    color: black;
+    border: none;
+    font-weight: bold;
+    padding: 10px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+ } */
+  .is-toggled{
+    background-color: rgb(230, 230, 230);
+    color: black;
+  }
